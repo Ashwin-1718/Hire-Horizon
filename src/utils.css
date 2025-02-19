@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: #6a38c2;
+  --primary-color-dark: #6132b4;
+  --text-dark: #262626;
+  --text-light: #27e809;
+  --extra-light: #e5e5e5;
+  --white: #ffffff;
+  --max-width: 1530px;
+}
+
+
+.header__container>img {
+  cursor: pointer;
+  position: absolute;
+  max-width: 50px;
+  padding: 7px;
+  border-radius: 100%;
+  box-shadow: 2px 2px 20px rgba(0, 251, 255, 0.5);
+  z-index: -1;
+  animation: float 6s ease-in-out infinite, Icons-Color 6s ease-in-out infinite;
+}
+
+/* @keyframes Icons-Color {
+  0% {
+    box-shadow: 2px 2px 10px rgb(0, 255, 0);;
+  }
+  25% {
+    box-shadow: 2px 2px 10px  rgb(0, 183, 255);
+  }
+  50% {
+    box-shadow: 2px 2px 10px rgb(255, 0, 251);
+  }
+  75% {
+    box-shadow: 2px 2px 10px rgba(0, 26, 255, 0.5);
+  }
+  100% {
+    box-shadow: 2px 2px 10px rgba(255, 0, 0, 0.5);
+  }
+} */
+
+
+/* Animation for color change */
+@keyframes colorChange {
+  0% {
+    color: rgb(234, 0, 255);
+  }
+
+  25% {
+    color: rgb(17, 255, 0);
+  }
+
+  50% {
+    color: rgb(0, 204, 255);
+  }
+
+  75% {
+    color: rgb(0, 13, 255);
+  }
+
+  100% {
+    color: rgb(234, 0, 255);
+  }
+}
+
+/* STyle for IMG ICONS */
+.header__container>img:nth-child(1) {
+  top: 30%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.header__container>img:nth-child(2) {
+  top: 50%;
+  left: 25rem;
+  transform: translate(-50%, -50%);
+}
+
+.header__container>img:nth-child(3) {
+  top: 75%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.header__container>img:nth-child(4) {
+  top: 20%;
+  right: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.header__container>img:nth-child(5) {
+  top: 50%;
+  left: 15rem;
+  transform: translateY(-50%);
+}
+
+.header__container>img:nth-child(6) {
+  top: 65%;
+  right: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.header__container>img:nth-child(7) {
+  top: 45%;
+  right: 9%;
+  transform: translate(-50%, -50%);
+}
+
+.header__container>img:nth-child(8) {
+  top: 40%;
+  right: 20%;
+  transform: translate(-50%, -50%);
+}
+
+/* Animation for floating effect */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
