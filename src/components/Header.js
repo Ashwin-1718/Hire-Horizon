@@ -3,6 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <>
+    
       <header className="section__container header__container" id="home">
         <img src="/assets/google.png" alt="Google" />
         <img src="/assets/twitter.png" alt="Twitter" />
@@ -32,12 +33,10 @@ const Header = () => {
           </a>
         </div>
       </header>
-
-
-      <audio autoPlay loop>
+      
+      {/* <audio autoPlay loop>
         <source src="/assets/LONOWN - AVANGARD (Slowed  Reverb).mp3"/>
-      </audio>
-
+      </audio> */}
 
     </>
   );

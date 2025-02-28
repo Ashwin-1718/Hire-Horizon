@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Steps = () => {
-  return (
+  return ( 
     <section className="steps" id="about">
       <div className="section__container steps__container">
         <h2 className="section__header">

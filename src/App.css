@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(135deg, #6a38c2, #00d4ff, rgb(255, 23, 255));
+  z-index: 2000;
+  transition: width 0.3s ease;
+}
