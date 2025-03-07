@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.bootstrap h1 {
+  text-align: center;
+  color: rgb(234, 0, 255);
+  font-family: "Noto Serif";
+  font-size: 30px;
+  animation: colorChange 5s linear infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+h1,
+h4,
+p {
+  font-family: "Noto Serif";
+}
+
+body {
+  font-family: "cambria", "Poppins", sans-serif;
+}
+
+/* Footer Styles */
+.footer {
+  height: 50px;
+  background: linear-gradient(135deg, rgb(17, 211, 255), rgb(255, 23, 255));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px 25px;
+  bottom: 0;
+  gap: 5px;
+}
+
+.footer p,
+.footer a {
+  font-family: "Felipa";
+  margin: 0;
+  padding: 0;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
