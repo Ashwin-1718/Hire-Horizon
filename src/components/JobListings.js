@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 
 const Intern = () => {
   const [showApplication, setShowApplication] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
+  const [searchTerm, setSearchTerm] = useState(""); // New state for search
 
   const jobs = [
     { 
@@ -25,7 +26,6 @@ const Intern = () => {
       salary: "$1,01,000/Year", 
       logo: "assets/amazon.png" 
     },
-
     { 
       id: 3, 
       company: "Microsoft", 
@@ -50,6 +50,13 @@ const Intern = () => {
     setShowApplication(false);
   };
 
+  // Memoized filtered jobs based on search term
+  const filteredJobs = useMemo(() => {
+    return jobs.filter(job =>
+      job.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [searchTerm]);
+
   return (
     <section className="section__container job__container" id="job">
       <h2 className="section__header">
@@ -59,28 +66,49 @@ const Intern = () => {
         Discover Exciting New Opportunities and High-Demand Positions Available Now in Top Industries and Companies
       </p>
 
+      {/* Search Bar Section */}
+      <section className="search__section">
+        <div className="search__container">
+          <input
+            type="text"
+            className="search__input"
+            placeholder="Search internships by title (e.g., Project Manager)"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          {/* Optional: Add a search button if desired */}
+          <button className="search__btn" onClick={() => {}}>
+            Search
+          </button>
+        </div>
+      </section>
+
       <div className="job__grid">
-        {jobs.map((job) => (
-          <div key={job.id} className="job__card">
-            <div className="job__card__header">
-              <img src={job.logo} alt={`${job.company} logo`} />
-              <div>
-                <h5>{job.company}</h5>
-                <h6>{job.location}</h6>
+        {filteredJobs.length === 0 ? (
+          <p className="no__results">No internships found for "{searchTerm}". Try another title!</p>
+        ) : (
+          filteredJobs.map((job) => (
+            <div key={job.id} className="job__card">
+              <div className="job__card__header">
+                <img src={job.logo} alt={`${job.company} logo`} />
+                <div>
+                  <h5>{job.company}</h5>
+                  <h6>{job.location}</h6>
+                </div>
               </div>
+              <h4>{job.title}</h4>
+              <p>{job.desc}</p>
+              <div className="job__card__footer">
+                <span>{job.positions} Positions</span>
+                <span>Full Time</span>
+                <span>{job.salary}</span>
+              </div>
+              <button className="btn apply-btn" onClick={() => handleApply(job)}>
+                Apply Now
+              </button>
             </div>
-            <h4>{job.title}</h4>
-            <p>{job.desc}</p>
-            <div className="job__card__footer">
-              <span>{job.positions} Positions</span>
-              <span>Full Time</span>
-              <span>{job.salary}</span>
-            </div>
-            <button className="btn apply-btn" onClick={() => handleApply(job)}>
-              Apply Now
-            </button>
-          </div>
-        ))}
+          ))
+        )}
       </div>
 
       {showApplication && selectedJob && (

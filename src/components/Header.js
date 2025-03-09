@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react"; // Added useEffect for state update sync
+// import "./Header.css";
 
-const Header = () => {
+const Header = ({ searchTerm, setSearchTerm }) => {
+  const handleSearch = (e) => {
+    if (e.key === 'Enter' || e.target.className === 'search__btn') {
+      const value = e.target.value || searchTerm;
+      console.log("Header.js - Search triggered with value:", value); // Debug: Confirm search value
+      setSearchTerm(value);
+
+      // Wait for state to update, then scroll
+      setTimeout(() => {
+        const jobListingsSection = document.getElementById('jobs');
+        if (jobListingsSection) {
+          // Adjust scroll position to account for fixed Navbar (assuming 60px height)
+          const offset = 60; // Adjust this value based on your Navbar height
+          const elementPosition = jobListingsSection.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({
+            top: elementPosition - offset,
+            behavior: 'smooth',
+          });
+        }
+      }, 100); // Small delay to ensure state update
+    }
+  };
+
   return (
     <>
-    
       <header className="section__container header__container" id="home">
         <img src="/assets/google.png" alt="Google" />
         <img src="/assets/twitter.png" alt="Twitter" />
@@ -33,11 +55,25 @@ const Header = () => {
           </a>
         </div>
       </header>
-      
-      {/* <audio autoPlay loop>
-        <source src="/assets/LONOWN - AVANGARD (Slowed  Reverb).mp3"/>
-      </audio> */}
 
+      <section className="search__section">
+        <div className="search__container">
+          <input
+            type="text"
+            className="search__input"
+            placeholder="Search jobs by title (e.g., React Developer, UI Designer)"
+            value={searchTerm}
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+              console.log("Header.js - Input changed to:", e.target.value); // Debug: Confirm input change
+            }}
+            onKeyPress={handleSearch}
+          />
+          <button className="search__btn" onClick={handleSearch}>
+            Search
+          </button>
+        </div>
+      </section>
     </>
   );
 };
