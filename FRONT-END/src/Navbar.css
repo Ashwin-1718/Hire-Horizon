@@ -1,0 +1,88 @@
+/* Navbar */
+.navbar {
+    margin-top: 25px !important;
+    font-family: "Cambria";
+    background: linear-gradient(135deg, rgb(255, 23, 255), rgb(17, 211, 255));
+    padding: 0px 0px;
+    margin: 0 8px; /* Horizontal margin */
+    border-radius: 25px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar:hover {
+    background: linear-gradient(135deg, rgb(17, 211, 255), rgb(255, 23, 255));
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 23, 255, 0.5);
+  }
+  
+  /* Navbar Brand */
+  .navbar-brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Toggler Button */
+  .navbar-toggler {
+    border: none;
+  }
+  
+  /* Navbar Links */
+  .navbar-nav .nav-link {
+    font-family: "Felipa";
+    color: #fff !important;
+    margin-right: 5px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #070707 !important;
+    cursor: pointer;
+  }
+  
+  /* Search Bar */
+  .navbar .form-control {
+    font-family: "Felipa";
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent White */
+    color: #fff;
+    border: 3px solid #00f2ff; 
+    height: 45px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar .form-control::placeholder {
+    color: #fff; 
+    opacity: 0.7;
+  }
+  
+  .navbar .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #000;
+    border-color: rgb(255, 23, 255); /* Pink Focus Border */
+    box-shadow: 0 0 8px rgba(255, 23, 255, 0.5);
+  }
+  
+  /* Search Button */
+  .navbar .btn-outline-success {
+    font-family: "Felipa";
+    border-radius: 15px;
+    background-color: rgb(255, 23, 255);
+    height: 50px;
+    color: #fff;
+    border-color: #ffd700;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar .btn-outline-success:hover {
+    background-color: rgb(17, 211, 255);
+    color: #000;
+    box-shadow: 0 0 10px rgba(17, 211, 255, 0.8);
+  }
+  
+  
+  .container-fluid {
+    padding: 8px 16px;
+  }
+  

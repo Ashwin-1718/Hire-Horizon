@@ -1,0 +1,428 @@
+/* JobListings Section */
+.job__section {
+    padding: 5rem 1rem;
+    clear: both; /* Ensures it starts fresh */
+    overflow: hidden; /* Prevents content from spilling */
+  }
+  
+  .section__container1 h2 {
+    font-family: "Noto Serif", serif;
+    animation: colorChange 5s linear infinite;
+  }
+  
+  /* Latest Section */
+  .job__container {
+    padding: 5rem 1rem;
+    margin-top: 2rem; /* Add spacing between sections */
+    clear: both; /* Ensures it starts fresh after JobListings */
+    overflow: hidden; /* Prevents content from spilling */
+  }
+  
+  .section__header {
+    font-family: "Noto Serif", serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: colorChange 5s linear infinite;
+  }
+  
+  .section__header span {
+    /* color: #6a38c2; */
+    animation: colorChange 5s linear infinite;
+  }
+  
+  .section__description {
+    font-family: "Felipa", sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Shared Job Grid */
+  .job__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2rem;
+    width: 100%; /* Ensure grid takes full width */
+  }
+  
+  /* JobListings Card (Flip Cards) */
+  .job__section .job__card {
+    perspective: 1000px;
+    height: 200px; /* Fixed height for flip */
+  }
+  
+  .job__section .job__card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .job__section .job__card:hover .job__card-inner,
+  .job__section .job__card.flipped .job__card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .job__section .job__card-front,
+  .job__section .job__card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: linear-gradient(135deg, rgba(255, 23, 255, 0.1), rgba(17, 211, 255, 0.1));
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    border: 0.0625rem solid var(--extra-light);
+  }
+  
+  .job__section .job__card-front {
+    z-index: 2;
+  }
+  
+  .job__section .job__card-back {
+    transform: rotateY(180deg);
+  }
+  
+  .job__section .job__card h3 {
+    font-family: "Noto Serif", serif;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+  }
+  
+  .job__section .job__card p {
+    font-family: "Felipa", sans-serif;
+    font-size: 1.2rem;
+    color: rgb(255, 0, 183); /* Front side */
+  }
+  
+  .job__section .job__card-back p {
+    color: #00d4ff; /* Back side */
+  }
+  
+  /* JobListings Button */
+  .job__section .job__card .btn {
+    font-family: "Felipa", serif;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .job__section .job__card-front .btn {
+    background-color: #ff00fb; /* Bright pink/magenta */
+    color: #fff;
+  }
+  
+  .job__section .job__card-back .btn {
+    background-color: #00d4ff; /* Cyan */
+    color: #fff;
+  }
+  
+  .job__section .job__card .btn:hover {
+    background-color: rgb(255, 23, 255);
+    box-shadow: 0 2px 10px rgba(255, 23, 255, 0.5);
+    color: #000000;
+  }
+  
+  /* Latest Job Card */
+  .job__container .job__card {
+    background: linear-gradient(135deg, rgba(255, 23, 255, 0.1), rgba(17, 211, 255, 0.1));
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    border: 0.0625rem solid var(--extra-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto; /* Ensure height adjusts to content */
+  }
+  
+  .job__container .job__card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.25rem 1rem rgba(106, 56, 194, 0.3);
+  }
+  
+  .job__container .job__card__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .job__container .job__card__header img {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+  }
+  
+  .job__container .job__card h5 {
+    font-family: "Noto Serif", serif;
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin: 0;
+  }
+  
+  .job__container .job__card h6 {
+    font-family: "Noto Serif", sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+  }
+  
+  .job__container .job__card h4 {
+    font-family: "Noto Serif", serif;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin: 0.5rem 0;
+    animation: colorChange 5s linear infinite;
+  }
+  
+  .job__container .job__card p {
+    font-family: "Felipa", sans-serif;
+    font-size: 1rem;
+    color: rgb(255, 0, 183);
+    margin: 0.5rem 0 1rem;
+  }
+  
+  .job__container .job__card__footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  
+  .job__container .job__card__footer span {
+    font-family: "Felipa", sans-serif;
+    font-size: 0.9rem;
+    color:  #00d4ff;
+    background: rgba(0, 212, 255, 0.1);
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.5rem;
+    margin: 0.2rem;
+  }
+  
+  /* Apply Button */
+  .job__container .apply-btn {
+    font-family: "Felipa", serif;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    background-color: #ff00fb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .job__container .apply-btn:hover {
+    background-color: rgb(255, 23, 255);
+    box-shadow: 0 2px 10px rgba(255, 23, 255, 0.5);
+    color: #000000;
+  }
+  
+  /* Form Styling */
+  .application__section {
+    padding: 5rem 1rem;
+  }
+  
+  .application__form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255, 23, 255, 0.1), rgba(17, 211, 255, 0.1));
+    border-radius: 1rem;
+    border: 0.0625rem solid var(--extra-light);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    font-family: "Felipa", serif;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    font-family: "Felipa", sans-serif;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 0.0625rem solid var(--extra-light);
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-input:focus {
+    border-color: #00ff22;
+    outline: none;
+  }
+  
+  /* Match form buttons to job card buttons */
+  .btn.submit-btn,
+  .btn.back-btn {
+    font-family: "Felipa", serif;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .submit-btn {
+    background-color: #ff00fb;
+    color: #fff;
+  }
+  
+  .submit-btn:hover {
+    background-color: rgb(255, 23, 255);
+    box-shadow: 0 2px 10px rgba(255, 23, 255, 0.5);
+    color: #000000;
+  }
+  
+  .back-btn {
+    margin-left: 1rem;
+    background-color: #00d4ff;
+  }
+  
+  .back-btn:hover {
+    background-color: rgb(255, 23, 255);
+    box-shadow: 0 2px 10px rgba(255, 23, 255, 0.5);
+  }
+  
+  /* Modal styles */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal__content {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+  }
+  
+  .modal__content h3 {
+    font-family: "Noto Serif", serif;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1024px) { /* Tablets */
+    .job__section,
+    .job__container {
+      padding: 3rem 1rem;
+    }
+  
+    .job__section .job__card {
+      height: 180px;
+    }
+  
+    .job__container .job__card {
+      padding: 1.2rem;
+    }
+  
+    .job__section .job__card h3,
+    .job__container .job__card h4 {
+      font-size: 1.3rem;
+    }
+  
+    .job__section .job__card p,
+    .job__container .job__card p {
+      font-size: 0.9rem;
+    }
+  
+    .job__section .job__card .btn,
+    .job__container .apply-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 768px) { /* Mobiles */
+    .job__section,
+    .job__container {
+      padding: 2rem 0.5rem;
+    }
+  
+    .section__header {
+      font-size: 2rem;
+    }
+  
+    .section__description {
+      font-size: 1rem;
+    }
+  
+    .job__grid {
+      gap: 1.5rem;
+    }
+  
+    .job__section .job__card {
+      height: 150px;
+    }
+  
+    .job__container .job__card {
+      padding: 1rem;
+      height: auto;
+    }
+  
+    .job__section .job__card-front,
+    .job__section .job__card-back {
+      padding: 1.5rem;
+    }
+  
+    .job__section .job__card h3,
+    .job__container .job__card h4 {
+      font-size: 1.2rem;
+    }
+  
+    .job__section .job__card p,
+    .job__container .job__card p {
+      font-size: 0.8rem;
+    }
+  
+    .job__container .job__card__header img {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .job__container .job__card h5 {
+      font-size: 1.1rem;
+    }
+  
+    .job__container .job__card h6 {
+      font-size: 0.8rem;
+    }
+  
+    .job__container .job__card__footer span {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.5rem;
+    }
+  
+    .job__section .job__card .btn,
+    .job__container .apply-btn {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.7rem;
+      margin-top: 0.8rem;
+    }
+  }

@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Noto+Serif:wght@400;700&family=Felipa&display=swap");
+
+:root {
+  --primary-color: #6a38c2;
+  --primary-color-dark: #6132b4;
+  --text-dark: #262626;
+  --text-light: #00d4ff;
+  /* Changed from green #27e809 to cyan */
+  --extra-light: #e5e5e5;
+  --white: #ffffff;
+  --accent-pink: rgb(255, 23, 255);
+  /* Added for consistency */
+  --accent-cyan: rgb(17, 211, 255);
+  /* Added for consistency */
+  --accent-yellow: #ffd700;
+  /* Added for consistency */
+  --max-width: 1530px;
+}
+
+/* Company Logos Animation (for header) */
+.header__container>img {
+  cursor: pointer;
+  position: absolute;
+  max-width: 3.125rem;
+  padding: 0.4375rem;
+  border-radius: 100%;
+  box-shadow: 0.125rem 0.125rem 1.25rem rgba(0, 251, 255, 0.5);
+  z-index: -1;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Keyframes */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-1.25rem);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: var(--accent-pink);
+  }
+
+  25% {
+    color: var(--text-light);
+  }
+
+
+  50% {
+    color: var(--accent-cyan);
+  }
+
+  75% {
+    color: var(--primary-color);
+  }
+
+  100% {
+    color: var(--accent-pink);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo Positioning (Header-specific) */
+.header__container>img:nth-child(1) {
+  top: 30%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.header__container>img:nth-child(2) {
+  top: 50%;
+  left: 25rem;
+  transform: translate(-50%, -50%);
+}
+
+.header__container>img:nth-child(3) {
+  top: 75%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.header__container>img:nth-child(4) {
+  top: 20%;
+  right: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.header__container>img:nth-child(5) {
+  top: 50%;
+  left: 15rem;
+  transform: translateY(-50%);
+}
+
+.header__container>img:nth-child(6) {
+  top: 65%;
+  right: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.header__container>img:nth-child(7) {
+  top: 45%;
+  right: 9%;
+  transform: translate(-50%, -50%);
+}
+
+.header__container>img:nth-child(8) {
+  top: 40%;
+  right: 20%;
+  transform: translate(-50%, -50%);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+  .header__container>img,
+  .steps__card,
+  .steps__card span {
+    animation: none;
+  }
+}
+
+
+/* Video Section */
+.video__section {
+  position: relative;
+  width: 98vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: #00d4ff 0px 0px 10px;
+  border-radius: 50px 20px 50px;
+}
+
+/* Override section__container padding for this section */
+.section__container.video__section {
+  padding: 0;
+  max-width: none;
+  /* Remove max-width constraint */
+}
+
+.section__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.9;
+  filter: brightness(85%) contrast(105%);
+}
+
+.video__overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--white);
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 0;
+  width: 100%;
+  max-width: none;
+  opacity: 0.7;
+}
+
+.video__overlay h2 {
+  font-family: "Noto Serif", serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+  /* Subtle shadow for contrast */
+}
+
+.video__overlay p {
+  font-family: "Noto Serif", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 2rem;
+  text-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .video__overlay h2 {
+    font-size: 2.5rem;
+  }
+
+  .video__overlay p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .video__section {
+    height: 40vh;
+    /* Your preferred mobile height */
+    width: 45.5vh;
+  }
+
+  .video__overlay h2 {
+    font-size: 1.75rem;
+  }
+
+  .video__overlay p {
+    font-size: 1rem;
+  }
+
+  .video__overlay {
+    opacity: 0.4;
+    /* Slightly reduced for mobile */
+  }
+
+  .section__video {
+    opacity: 0.9;
+    /* Slightly reduced for mobile */
+  }
+}
