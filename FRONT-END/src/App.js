@@ -23,7 +23,7 @@ const App = () => {
           <Navbar />
           <main>
             <Routes>
-              <Routeq
+              <Route
                 path="/"
                 element={
                   <>
