@@ -1,3 +1,4 @@
+# Hire-Horizon
 # Job Portal App
 
 ## 🚀 Overview
@@ -83,8 +84,10 @@ A sleek and modern **Job Portal App** built using React and Vite, designed to co
 
 ## 🖼️ Preview
 
-![Homepage Preview](https://via.placeholder.com/800x400.png?text=Homepage+Preview)
-![Job Application Page](https://via.placeholder.com/800x400.png?text=Application+Form+Preview)
+![Homepage](./public/screenshots/home.png)
+
+### 🛠️ Admin Panel
+![Admin Panel](./public/assets/AK1.png)
 
 > 📸 *Replace these preview links with actual screenshots or screen recordings of your project.*
 
@@ -112,11 +115,6 @@ A sleek and modern **Job Portal App** built using React and Vite, designed to co
 | Backend     | (Upcoming) Node.js, Express, Prisma          |
 | Database    | (Upcoming) PostgreSQL / MongoDB              |
 | Auth        | (Upcoming) Firebase / NextAuth.js            |
-
----
-
-## 📂 Folder Structure
-
 
 ---
 Made with ❤️ by Ashwin Yadav 🚀
