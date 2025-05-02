@@ -86,7 +86,8 @@ A sleek and modern **Job Portal App** built using React and Vite, designed to co
 
 ![Homepage](./public/screenshots/home.png)
 
-### 🛠️ Admin Panel
+### 🛠️ Admin Panel![Screenshot 2025-04-08 194838](https://github.com/user-attachments/assets/b1691053-b6af-4630-a290-7b736cd24f49)
+
 ![Admin Panel](assets/AK1.png)
 
 ---
