@@ -96,9 +96,9 @@ A sleek and modern **Job Portal App** built using React and Vite, designed to co
 - 🔍 **Advanced Search & Filters** – Filter jobs by title, location, or salary.
 - 📄 **Apply Instantly** – Submit job applications directly.
 - 📂 **Resume Upload** – Upload resumes during the application process.
-- 🔐 **User Authentication (Upcoming)** – Secure login & signup support.
+- 🔐 **User Authentication** – Secure login & signup support.
 - 📱 **Responsive Design** – Fully responsive with Tailwind CSS & ShadCN UI.
-- ⚙️ **Admin Dashboard (Upcoming)** – For job post and application management.
+- ⚙️ **Admin Dashboard** – For job post and application management.
 
 ---
 
