@@ -107,7 +107,7 @@ A sleek and modern **Job Portal App** built using React and Vite, designed to co
 | Area        | Tech Stack                                   |
 |-------------|----------------------------------------------|
 | Frontend    | React.js, Vite, React Router                 |
-| UI Design   | Tailwind CSS, ShadCN UI                      |
+| UI Design   | CSS, Bootstrap                      |
 | State Mgmt  | React Hooks (`useState`, `useEffect`)        |
 | Backend     | (Upcoming) Node.js, Express, Prisma          |
 | Database    | (Upcoming) PostgreSQL / MongoDB              |
