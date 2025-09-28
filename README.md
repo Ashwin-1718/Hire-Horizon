@@ -64,13 +64,6 @@ yarn install   # or npm install
 ```sh
 yarn dev   # or npm run dev
 ```
-
-## 📌 Next Steps
-- ✅ **Search & Filters** (Completed)
-- 🔜 **User Authentication** (Login & Signup)
-- 🔜 **Backend API Integration** (Job Listings & Applications)
-- 🔜 **Admin Dashboard** (Manage Job Posts & Applications)
-
 # 💼 Hire-Horizon – Job Portal App
 
 ![React](https://img.shields.io/badge/React-18.x-blue?logo=react)
